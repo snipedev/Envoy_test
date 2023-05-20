@@ -1,0 +1,16 @@
+version: '3'
+services:
+  coffeeapi:
+    build: CoffeeApi/
+    ports:
+      - "8080:80"
+    environment:
+      ASPNETCORE_URLS: "http://+"
+      ASPNETCORE_ENVIRONMENT: "Development"
+  teaapi:
+    build: TeaApi/
+    ports:
+      - "8082:80"
+    environment:
+      ASPNETCORE_URLS: "http://+"
+      ASPNETCORE_ENVIRONMENT: "Development"
